@@ -5,7 +5,7 @@ tagline: Tagline
 description: Description
 ---
 
-landing
+landing (with posts!)
 
 ****************
 
@@ -15,6 +15,8 @@ world!
 
 
 ****************
+
+<div id="posts" markdown="0">
 
 {%- assign allposts = site.posts | concat: site.personal | sort_natural: "date" | reverse %}
 
@@ -28,3 +30,5 @@ world!
   {%- endfor %}
 </ul>
 {%- endfor %}
+
+</div>
