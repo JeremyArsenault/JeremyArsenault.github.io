@@ -22,9 +22,9 @@ world!
   <article>
     <ul>
       <li>
-        <a href="{{ post.url }}">
+        <h3><a href="{{ post.url }}">
         {{ post.title }}
-        </a><br>
+        </a></h3><br>
         <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
       </li>
     </ul>
