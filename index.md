@@ -16,19 +16,14 @@ world!
 
 ****************
 
-<div id="posts" markdown="0">
-
-{%- assign allposts = site.posts | concat: site.personal | sort_natural: "date" | reverse %}
-
-{%- assign postsByYearMonth = allposts | group_by_exp:"allposts", "allposts.date | date: '%Y %B'"  %}
-
-{%- for yearMonth in postsByYearMonth %}
-<h3>{{ yearMonth.name }}</h3>
-<ul>
-  {%- for post in yearMonth.items %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {%- endfor %}
-</ul>
-{%- endfor %}
-
-</div>
+{% for post in site.posts %}
+  <article>
+    <h2>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    {{ post.content }}
+  </article>
+{% endfor %}
