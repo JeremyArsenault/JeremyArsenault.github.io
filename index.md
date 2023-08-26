@@ -1,22 +1,6 @@
 ---
 layout: page
-title: Blog Title
-tagline: Tagline
-description: Description
 ---
-
-landing (with posts!)
-
-****************
-
-# Hello
-
-world!
-
-
-****************
-
-# Archive
 
 {% for post in site.posts %}
   <article>
