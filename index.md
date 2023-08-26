@@ -10,5 +10,4 @@ layout: page
     <span style="font-size:16px;text-align:right;"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time></span>
     </h3>
   </article>
-  <br>
 {% endfor %}
