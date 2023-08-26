@@ -4,10 +4,10 @@ layout: page
 
 {% for post in site.posts %}
   <article>
-    <h3><u><a href="{{ post.url }}">
+    <h3><a href="{{ post.url }}">
     {{ post.title }}
-    </a></u></h3>
+    </a></h3>
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
   </article>
-  </br>
+  <br>
 {% endfor %}
