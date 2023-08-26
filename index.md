@@ -6,8 +6,9 @@ layout: page
   <article>
     <h3><a href="{{ post.url }}">
     {{ post.title }}
-    </a></h3>
-    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    </a>
+    <span style="font-size:16px;"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time></span>
+    </h3>
   </article>
   <br>
 {% endfor %}
