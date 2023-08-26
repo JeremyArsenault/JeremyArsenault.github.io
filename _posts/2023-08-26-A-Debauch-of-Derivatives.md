@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Debauch of Derivatives
-date: 2023-08-27
+date: 2023-08-26
 ---
 
 After sleeping through two years of an undergraduate curriculum in mathematics, I awoke to maths beauty and intrigue during a course in partial differential equations - a semester long treatment of the heat and wave equations. How can one not be awestruck by single, concise, mathematical expression that completely describes a huge class of dynamical systems? So as the torrent of due dates and exams relentlessly approached I impetuously manipulated expressions and chain ruled my way into the dawn...
