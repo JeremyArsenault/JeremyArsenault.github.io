@@ -10,7 +10,7 @@ layout: page
           {{ post.title }}
           </a></h3>
         </div>
-        <div style="margin-left: 25%; height: 100%; text-align: right;">
+        <div style="margin-left: 25%; height: 100%; text-align: right; vertical-align: bottom;">
           <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
         </div>
     </div>
