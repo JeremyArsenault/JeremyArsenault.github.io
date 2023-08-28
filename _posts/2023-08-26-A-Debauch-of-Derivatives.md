@@ -2,11 +2,12 @@
 layout: post
 title: A Debauch of Derivatives
 date: 2023-08-26
+published: false
 ---
 
 # UNDER CONSTRUCTION
 
-After sleeping through two years of an undergraduate curriculum in mathematics, I awoke to maths beauty and intrigue during a course in partial differential equations - a semester long treatment of the heat and wave equations. How can one not be awestruck by single, concise, mathematical expression that completely describes a huge class of dynamical systems? So as the torrent of due dates and exams relentlessly approached I impetuously manipulated expressions and chain ruled my way into the dawn...
+After literally and figuratively sleeping through two years of an undergraduate curriculum in mathematics, I found myself in a course on partial differential equations where I was confronted by concise mathematical expressions that not only completely describe huge classes of dynamical systems, but were important in ostensibly unrelated fields of physics including electromagnetism, relativity, and quantum field theory. My curiosity, and therefore my interest, in math was rekindled, so armed with but a textbook and a pencil I impetuously manipulated expressions and chain ruled my way into the dawn...
 
 But I was foolhardy, and ignorance is bliss. Only during my later studies of calculus did I realize the true depth of my confusion - my truancy had caught up with me. I *felt* like I understood the derivative, but what were these objects that I was manipulating? How was $$\frac{\partial f}{\partial t}$$ different from $$\frac{df}{dt}$$? Are they infinitesimal fractions? What does that mean for expressions involving $$dt$$? 
 
@@ -30,6 +31,8 @@ These derivative formulas tell you how the output of $f$ changes respect to its 
 
 Note that the derivative is only meaningful for *smooth functions*. Smoothness generally refers to the continuity of the derivatives of a function. If $$f',f'',...,f^{(k)}$$ all exist and are continuous, we say $$f$$ is of class $$C^k$$. In this essay, we assuming the (unnessecarily strict) condition that all functions are of class $$C^\infty$$.
 
+### The Tangent Space on $$\mathbb{R}^n$$
+
 ### Chain Rule and Linearity of the Derivative
 
 The chain rule is how we compute the derivative of compositions of functions. It is usually justified using the following (incomplete) proof (when $$g$$ is not constant at $$t$$)
@@ -39,37 +42,19 @@ $$(f\circ g)'(t) = \lim_{\delta\to 0} \frac{f(g(t+\delta))-f(g(t))}{\delta} = \l
 
 $$= f'(g(t))\cdot g'(t)$$
 
-This method of proof can be used to show that the derivative at any point is a linear map. For $$f:\mathbb{R}^n\to \mathbb{R}^m$$, $$u,v\in\mathbb{R}^n$$, and $$a,b\in\mathbb{R}$$
+Similarly, stated in terms of the directional derivative, the chain rule for functions $$g:\mathbb{R}^n\to \mathbb{R}^m$$, $$f:\mathbb{R}^m\to \mathbb{R}^l$$, and $$x,v\in\mathbb{R}^n$$ is
 
-$$D_(av+bu)f^i = aD_vf^i+bD_uf^i$$
+$$D_v(f\circ g)^i(x) = D_{(D_vg^1(x),...,D_vg^m(x)}f^i(g(x))$$
 
-Linear map means vector space... rn has natural basis, and if f is
+An interesting consequence of this is property is that the derivative is a linear operator.
 
+$$D_vf^i(x) = (\sum_{j=1}^m v^jD_jf^i)(x)$$
 
+Where $$D_i=D_{(\delta_i^1,...,\delta_i^n)}$$ denotes the directional derivative with respect to the $$i$$th standard basis vector of $$\mathbb{R}^n$$.
 
+We find this interesting later... can we preview that now? Maybe scope of essay is too broad... lecture on tangent space and differentiable manifolds is huge?
 
-AT A POINT
-1. Vector Space,
-1. Linearity: acts on functions,  
-
-For any functions
-
-$$ D_1c(t)$$
-
-Perhaps what is most interesting about this property is that it implies the *linearity of derivative*. Let $$\phi(t)_a=t_0+a(t-t_0)$$ be the linear function with derivative $$a$$ and $$\phi(t_0)=t_0$$, then $$(f\circ \phi_a)'(t_0)=af'(t_0)$$. This construction 
-
-The same proof, when applied to
-
-A similar procedure shows that
-
-This construction may seem clunky
-
-Where $$D_i$$ denotes $$D_{(0,...,1^i,...,0)}$$
-
-Explains the name 
-
-The derivative is pushing around the tangent vector
-
+### Submaniflods and Parameterization
 
 ## Differentiation on Manifolds
 
@@ -77,9 +62,20 @@ The derivative is pushing around the tangent vector
 
 Imagine you want to ...
 
+Tangent vectors ...
 
 To this point I've done my best to avoid expressing vectors as ... when working in Rn it can be useful to identify tangent vectors with column vectors and linear transformations as jacobian matricies.... great computationally, perfectly fine until you get to more complicated constructions on manifolds / tensors
 
-## Differential Equations
+## Ordinary Differential Equations
 
-## Equivalence on $$\mathbb{R}$$
+key point of essay: 
+
+Itentification of R with TR -> gives rise to initial conditions of ODEs
+
+Can all ODEs (and PDEs) be expressed as differential forms?
+
+
+
+want to note that the ordinary 1d deriv is a rule for comparing tangent spaces, this is where initial conditions come from (w/o integral)
+
+## Recap: Notational Equivalence on $$\mathbb{R}$$
